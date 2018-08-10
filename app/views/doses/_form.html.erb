@@ -1,5 +1,16 @@
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-<%= f.input :description %>
-<%= f.association :ingredient %>
-<%= f.button :submit %>
+<% if @dose.new_record? %>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.button :submit %>
+  <% end %>
+<% else %>
+  <%= simple_form_for @dose do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.button :submit %>
+  <% end %>
 <% end %>
+
+
+<!-- = simple_form_for @news_item, :url => @news_item.new_record? ? url_for(action: 'create', controller: 'admin/news_items') : url_for(action: 'update', controller: 'admin/news_items') do |f| -->

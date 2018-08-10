@@ -4,9 +4,13 @@
   <% @cocktail.doses.each do |dose| %>
     <li>
     <h4><%= dose.description %> - <%= dose.ingredient.name %></h4>
+    <%= link_to "<i class=\"fas fa-pencil-alt\"></i>".html_safe, new_or_edit_dose_path(@cocktail.id, dose.id) %>
+    <%= link_to "<i class=\"far fa-trash-alt\"></i>".html_safe, dose_path(dose.id), method: :delete, data: {confirm: "Are you sure?"} %>
     </li>
   <% end %>
   </ul>
-  <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail.id) %>
+  <%= render "doses/form" %>
   <%= link_to "Back", cocktails_path %>
 </div>
+
+
