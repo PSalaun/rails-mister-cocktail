@@ -1,6 +1,9 @@
-<% @cocktails.each do |cocktail| %>
-  <div>
-  <%= link_to cocktail.name, cocktail_path(cocktail) %>
+  <div class="container">
+    <%= render "components/carousel" %>
+    <% @cocktails.each do |cocktail| %>
+      <div>
+        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+      </div>
+    <% end %>
   </div>
-<% end %>
 
