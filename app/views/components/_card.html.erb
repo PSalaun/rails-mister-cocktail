@@ -1,0 +1,7 @@
+<div class="cocktail-card">
+  <%= link_to cocktail_path(cocktail.id) do %>
+    <%= cl_image_tag cocktail.photo, width:1140, height:620, crop:"fill" %>
+    <h2 class="cocktail-name"> <%= cocktail.name %></h2>
+    <h2 class="cocktail-doses"> <%= cocktail.doses.count %> ingredients</h2>
+  <% end %>
+</div>

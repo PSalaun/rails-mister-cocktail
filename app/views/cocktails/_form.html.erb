@@ -1,6 +1,10 @@
-<%= simple_form_for @cocktail do |f| %>
-<%= f.input :name %>
-<%= f.input :photo %>
-<%= f.input :photo_cache, as: :hidden %>
+<%= simple_form_for @cocktail, wrapper: :inline_form, html: { class: 'form-inline' } do |f| %>
+<div class="form-group inputs">
+  <%= f.input :name, placeholder: "Enter cocktail's name" %>
+  <%= f.input :photo, label: "Choose a photo" %>
+  <%= f.input :photo_cache, as: :hidden %>
+</div>
+<div class="cocktail-submit">
 <%= f.button :submit %>
+</div>
 <% end %>

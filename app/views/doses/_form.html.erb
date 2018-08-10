@@ -1,13 +1,13 @@
 <% if @dose.new_record? %>
   <%= simple_form_for [@cocktail, @dose] do |f| %>
     <%= f.input :description %>
-    <%= f.association :ingredient %>
+    <%= f.association :ingredient, collection: Ingredient.order('name ASC') %>
     <%= f.button :submit %>
   <% end %>
 <% else %>
   <%= simple_form_for @dose do |f| %>
     <%= f.input :description %>
-    <%= f.association :ingredient %>
+    <%= f.association :ingredient, collection: Ingredient.order('name ASC') %>
     <%= f.button :submit %>
   <% end %>
 <% end %>

@@ -1,3 +1,11 @@
+.cocktail-navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
+}
+
 .container-fluid {
   padding: 0;
   height: 65px;
@@ -8,16 +16,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #F7F3E3;
+  background-color: hsla(48, 56%, 93%, 0);
+  opacity: 0,1;
 }
 
 .navbar_link {
   text-align: center;
   flex: 0 0 250px;
   a {
-  color: $main_darker;
+  color: white;
   font-family: $navbar-font;
   text-decoration: none;
+  font-weight: 600;
   &:hover {
     font-weight: 600;
   }

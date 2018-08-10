@@ -1,9 +1,15 @@
+  <div class="overlay">
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="https://res.cloudinary.com/dsvhrgnwm/video/upload/v1533924306/Three-Cocktails.webm" type="video/mp4">
+    </video>
+  </div>
+
   <div class="container">
-    <%= render "components/carousel" %>
-    <% @cocktails.each do |cocktail| %>
-      <div>
-        <%= link_to cocktail.name, cocktail_path(cocktail) %>
-      </div>
-    <% end %>
+    <div class="row">
+      <%= render "components/carousel" %>
+    </div>
+    <div class="row">
+      <%= render "layouts/cards" %>
+    </div>
   </div>
 

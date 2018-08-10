@@ -1,8 +1,11 @@
-.active img {
-  background-size: cover;
-  background-position: center;
+.carousel-caption {
+    font-size: 9em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
-#carousel-cocktails, .carousel-inner {
-  height: 600px;
+.carousel-cocktails {
+  position: absolute;
+  width: 1400px;
+  z-index: 10;
 }
+

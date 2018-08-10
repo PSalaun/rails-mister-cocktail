@@ -1,0 +1,32 @@
+.modal-content {
+  height: 20vh;
+  background-color: $background;
+  border-radius: 5px;
+  color: $main-darker;
+  #cocktail_photo {
+    display:none !important;
+  }
+  .cocktail_photo {
+    label {
+      padding: 0px 5px;
+      cursor: pointer;
+      background-color: $main_darker;
+      border-radius: 10px;
+      color: white;
+    }
+  }
+}
+
+.form-group.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 6vh;
+}
+
+.cocktail-submit {
+  text-align: center;
+  > input.btn {
+    background-color: $background;
+  }
+}

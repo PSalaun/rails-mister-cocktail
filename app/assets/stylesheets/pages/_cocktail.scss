@@ -1,0 +1,24 @@
+.doses {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  li {
+    display: flex;
+    align-items: center;
+  }
+  h4 {
+    flex: 0 0 60%;
+  }
+  .dose-icons {
+    width: 0 0 40%;
+    i {
+      color: white;
+    }
+  }
+}
+
+.infos {
+  background-color: #570000;
+  color: white;
+}
