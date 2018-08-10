@@ -8,7 +8,17 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-    <div class="item active">
+    <% top3 = @cocktails[0..2] %>
+    <% top3.each do |cocktail| %>
+    <div class="item">
+      <%= image_tag "bloodymary.jpg" %>
+      %= link_to "#{cl_image_tag @article.photo}", "link_path" %>
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+    <% end %>
+<!--     <div class="item active">
       <%= image_tag "bloodymary.jpg" %>
       %= link_to "hiii #{image_tag(yourimagepath)}", "link_path" %>
       <div class="carousel-caption">
@@ -20,8 +30,7 @@
       <div class="carousel-caption">
         ...
       </div>
-    </div>
-    ...
+    </div> -->
   </div>
 
   <!-- Controls -->
