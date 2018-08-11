@@ -10,14 +10,14 @@
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <%= link_to cocktail_path(Cocktail.first.id) do %>
-        <%= cl_image_tag Cocktail.first.photo, height:620, width:1400,crop:"fill" %>
+        <%= cl_image_tag Cocktail.first.photo, height:620, width:1400,crop:"fill", unless Cocktail.first.photo.blank? %>
         <div class="carousel-caption"><%= Cocktail.first.name %></div>
       <% end %>
     </div>
     <% @cocktails[1..2].each do |cocktail| %>
     <div class="item">
       <%= link_to cocktail_path(cocktail.id) do %>
-        <%= cl_image_tag cocktail.photo, height:620, width:1400,crop:"fill" %>
+        <%= cl_image_tag cocktail.photo, height:620, width:1400,crop:"fill", unless cocktail.photo.blank? %>
         <div class="carousel-caption"> <%= cocktail.name %></div>
       <% end %>
     </div>

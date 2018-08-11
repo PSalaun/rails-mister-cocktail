@@ -1,6 +1,6 @@
 <div class="card-wrapper">
   <% @cocktails[3..@cocktails.length].each do |cocktail| %>
-    <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+    <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill, unless cocktail.photo.blank? %>')">
       <%= link_to cocktail_path(cocktail.id) do %>
         <div class="cocktail-name"> <%= cocktail.name %></div>
         <div class="cocktail-doses"> <%= cocktail.doses.count %> ingredients</div>
