@@ -5,7 +5,7 @@
   </div>
 
   <div class="container">
-    <% if Cocktail.first %>
+    <% if Cocktail.count >= 4 %>
       <div class="row">
         <%= render "components/carousel" %>
       </div>
